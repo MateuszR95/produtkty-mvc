@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona główna</title>
+</head>
+<body>
+<h2>Wyświetl produkty:</h2>
+<ul>
+    <li><a href="/list">Wyświetl wszystkie produkty</a></li>
+    <li><a href="/list?category=GROCERIES">Wyświetl produkty spożywcze</a></li>
+    <li><a href="/list?category=HOUSEHOLD_ITEMS">Wyświetl produkty gosp. domowego</a></li>
+    <li><a href="/list?category=OTHER">Wyświetl inne produkty</a></li>
+</ul>
+
+<h2>Dodaj nowy produkt:</h2>
+<form method="post" action="/add">
+    Nazwa: <input type="text" name="name" required><br>
+    Cena: <input type="number" step="0.01" name="price" required><br>
+    Kategoria:
+    <select name="category" required>
+        <option value="GROCERIES">Art. spożywcze</option>
+        <option value="HOUSEHOLD_ITEMS">Art. gosp. domowego</option>
+        <option value="OTHER">Inne</option>
+    </select><br>
+    <input type="submit" value="Dodaj produkt">
+</form>
+</body>
+</html>
